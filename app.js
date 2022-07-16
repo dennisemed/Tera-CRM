@@ -7,6 +7,7 @@ const app = express();
 // inicializar mongoose
 const mongoose = require("mongoose");
 
+
 // servidor à escuta na porta 5000
 let port = 5000;
 app.listen(port, () =>{
@@ -16,11 +17,10 @@ app.listen(port, () =>{
 // Enviar os arquivos "estaticos", como JS, CSS, imagens
 app.use(express.static(__dirname));
 
+
 // Middleware utilizado para tramitação dos dados 
 const bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({extended:true}));
-
-
+app.use(bodyParser.json());
 
 // Determinação dos endereços das páginas 
 
@@ -29,7 +29,15 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
-// "Página de Registro’
+// "Painel de Vendas"
+app.get("/sales", function (req, res) {
+  res.sendFile(__dirname + "/vendas.html");
+});
+
+const bodyParsers = require("body-parser");
+app.use(bodyParsers.urlencoded({extended: true}));
+
+// "Página de Login’
 app.get("/login", function(req, res) {
   res.sendFile(__dirname + "/login.html");
 });
@@ -39,11 +47,10 @@ app.get("/signup", function(req, res) {
     res.sendFile(__dirname + "/signUp.html");
 });
 
+
 // todo o url começado por "/" chama as rotas em "./routes/api"
 const routes = require("./routes/api");
 app.use("/", routes);
-
-
 
 // Conexão a base de dados do Mongodb
 
