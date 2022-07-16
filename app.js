@@ -31,7 +31,7 @@ app.get("/", function(req, res) {
 
 // "Painel de Vendas"
 app.get("/sales", function (req, res) {
-  res.sendFile(__dirname + "/vendas.html");
+  res.sendFile(__dirname + "/sales.html");
 });
 
 const bodyParsers = require("body-parser");
