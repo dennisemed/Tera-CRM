@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas - Negócio fechado</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <!-- Fonts Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase" href="/">
+                <img src="./assets/favicon.png" alt="Logomarca da Negócio Fechado CRM. É composta por um aperto de mãos e uma moeda dourada" class="d-inline-block align-text-top" style="width:32px; height: 32px;">
+                Negócio Fechado
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" >Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse text-uppercase" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#workplace">Workplace</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Planos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ferramentas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login">Encerrar Sessão</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main id="main-vendas">
+        <div>
+            <h2>Instruções:</h2>
+            <ol id="instrucoes">
+                <li>Adicione o nome, e-mail e telefone do seu cliente.</li>
+                <li>Adicione as necessidades do seu cliente. 
+                    Qual as características do problema do seu cliente?</li>
+                <li>Elabore a proposta a ser enviada para o seu cliente. 
+                    Coloque o orçamento e em quantos dias o trabalho será entregue.</li>
+                <li>Adicione o feedback do seu cliente. Diga se o negócio foi fechado ou não e porquê.</li>
+            </ol>
+        </div>
+    
+        <div class="todas-etapas">
+                <div id="clientes" class="etapa">
+                    <h3>Clientes</h3>
+                    <button id="adicionar-cliente" class="botao">Adicionar cliente</button>
+                    <div id="criando-cliente"></div>
+                    <div id="clientes-cadastrados"></div>
+                </div>
+                <div id="necessidades" class="etapa">
+                    <h3>Necessidades do cliente</h3>
+                </div>
+                <div id="proposta" class="etapa">
+                    <h3>Proposta</h3>
+                </div>
+                <div id="resultado" class="etapa">
+                    <h3>Negócio Fechado</h3>
+                </div>
+        </div>
+    </main>    
+    
+    <script type="text/javascript" src="script-vendas.js"></script>
+</body>
+</html>
